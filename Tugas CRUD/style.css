@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0fbfc; /* Warna Laut Muda */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0a9396; /* Border lebih terang */
+}
+
+h2, h3 {
+    color: #005f73; /* Biru Laut */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #0a9396; /* Turquoise */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0a9396; /* Turquoise */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f73; /* Biru Laut */
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #0a9396; /* Turquoise */
+}
+
+th {
+    background-color: #005f73; /* Biru Laut */
+    color: white;
+}
+
+td button {
+    background-color: #ee6c4d; /* Terakota Laut */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+td button:hover {
+    background-color: #d1495b; /* Warna lebih gelap untuk efek hover */
+}
