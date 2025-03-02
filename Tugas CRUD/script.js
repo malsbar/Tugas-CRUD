@@ -6,16 +6,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // Tambah Admin
     adminForm.addEventListener("submit", function (e) {
         e.preventDefault();
-
+    
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const role = document.getElementById("role").value;
-
-        if (name === "" || email === "") {
+    
+        // Cek apakah nama dan email diisi
+        if (name === "" && email === "") {
             alert("Nama dan Email harus diisi!");
             return;
+        } else if (name === "") {
+            alert("Nama harus diisi!");
+            return;
+        } else if (email === "") {
+            alert("Email harus diisi!");
+            return;
         }
-
+    
         const newAdmin = { id: Date.now(), name, email, role };
         admins.push(newAdmin);
         renderTable();
