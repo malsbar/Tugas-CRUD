@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Admin - BlueHorizon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Master Admin - BlueHorizon</h2>
+        <form id="adminForm">
+            <label for="name">Nama Admin:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="role">Peran:</label>
+            <select id="role">
+                <option value="Super Admin">Super Admin</option>
+                <option value="Admin">Admin</option>
+            </select>
+            
+            <button type="submit">Tambah Admin</button>
+        </form>
+        
+        <h3>Daftar Admin</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Peran</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="adminTable"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
