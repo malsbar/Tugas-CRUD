@@ -11,9 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {  // Menjalankan scri
         const email = document.getElementById("email").value.trim();  // Mengambil input email dan menghapus spasi ekstra
         const role = document.getElementById("role").value;  // Mengambil nilai dari dropdown role
 
-        if (name === "" || email === "") {  // Validasi jika nama atau email kosong
+        if (name === "" && email === "") {  // Validasi jika nama atau email kosong
             alert("Nama dan Email harus diisi!");  // Menampilkan peringatan jika ada input kosong
             return;  // Menghentikan eksekusi jika validasi gagal
+        } else if (name === "") {  // Validasi jika nama kosong
+            alert("Nama harus diisi!");  // Menampilkan peringatan jika nama kosong
+            return;
+        } else if (email === "") {  // Validasi jika email kosong
+            alert("Email harus diisi!");  // Menampilkan peringatan jika email kosong
+            return;
         }
 
         const newAdmin = { id: Date.now(), name, email, role };  // Membuat objek admin baru dengan ID unik
@@ -29,12 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {  // Menjalankan scri
             const row = document.createElement("tr");  // Membuat elemen baris tabel baru
 
             row.innerHTML = `
-                <td>${admin.name}</td>  // Menampilkan nama admin dalam kolom pertama
-                <td>${admin.email}</td>  // Menampilkan email admin dalam kolom kedua
-                <td>${admin.role}</td>  // Menampilkan role admin dalam kolom ketiga
+                <td>${admin.name}</td>   
+                <td>${admin.email}</td>  
+                <td>${admin.role}</td>  
                 <td>
-                    <button onclick="editAdmin(${admin.id})">Edit</button>  // Tombol untuk mengedit admin
-                    <button onclick="deleteAdmin(${admin.id})">Hapus</button>  // Tombol untuk menghapus admin
+                    <button onclick="editAdmin(${admin.id})">Edit</button>  
+                    <button onclick="deleteAdmin(${admin.id})">Hapus</button>  
                 </td>
             `;
             adminTable.appendChild(row);  // Menambahkan baris baru ke tabel
